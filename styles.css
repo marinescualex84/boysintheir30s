@@ -1,0 +1,669 @@
+* {
+	margin: 0;
+}
+
+body {
+	background-color: rgb(237, 237, 237);
+}
+
+.header {
+	background-color: #111;
+	color: #fff;
+	font-family: arial, sans-serif;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+}
+
+.header_top, .header_bottom {
+	width: 1200px;
+	margin: auto;
+	height: 30px;
+	position: relative;
+}
+
+.header_bottom {
+	border-top: 0.5px solid #999;  
+}
+
+.header_top .header_logo {
+	height: 30px;
+	line-height: 30px;
+	font-size: 1em;
+	letter-spacing: -0.3px;
+	width: 330px;
+}
+
+.header_logo {
+	float: left;
+	margin-left: 10px;
+}
+
+.header_logo a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.header_top .header_logo #moustache_white {
+	float: left;
+	padding-right: 23px;
+}
+
+/*        SEARCH AREA       */
+
+.header_search {
+	width: 300px;
+	float: right;
+	height: 26px;
+	position: absolute;
+	top: 2px;
+	right: 0;
+}
+
+.header_search #search_field {
+	height: 16px;
+	margin-top: 3px;
+}
+
+.header_search input[type=text] {
+/*	background-image: url('Images/searchgri18x18.png');   <-- poza de fundal cu lupa 
+	background-repeat: no-repeat;
+	background-position: 140px 1px;  */   
+	width: 155px;
+	border-radius: 2px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border: none;
+	padding: 2px;
+	font-size: 12px;
+}
+
+.header_search input[type=text]:focus {
+	background-image: none;
+	border: none;
+	outline: none;
+/*	box-shadow: 0 0 0 2px #999;	 */
+}
+
+.header_search input[type=text]:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+.search_icon {
+	position: absolute;
+	top: 3px;
+	left: 159px;
+	float: left;
+} 
+
+.search_icon button {
+	background-image: url('Images/searchgri18x18.png');
+	background-color: #fff;
+	background-blend-mode: multiply;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 20px;
+	width: 20px;
+	border-radius: 2px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border: none;
+	display: block; 	/* pentru ca toata aria butonului sa fie clickable */
+}
+
+.search_icon button:hover {
+	cursor: pointer;
+	background-color: rgb(229, 229, 229);
+}
+
+.search_icon button:active {
+	background-color: rgb(137, 200, 255);
+/*	box-shadow: 0 0 0 2px #999;	  */
+}
+
+.subscribe_button {
+	position: absolute;
+	top: 0;
+	left: 210px;
+	float: left;
+}
+
+#subscribe_button {
+	background-color: #999;
+	color: white;
+	border: none;
+	border-radius: 2px;
+	height: 20px;
+	margin-top: 3px;
+	margin-right: 0;
+}
+
+#subscribe_button:hover {
+	color: #555;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+#subscribe_button:active {    /* cand apesi butonul */
+	color: #000;
+/*	box-shadow: 0 0 1px 2px #999;  */
+/*	font-weight: bold;				*/
+}
+
+/*       NAVIGATION BUTTONS AREA        */
+
+.nav_list {
+	list-style-type: none;
+	margin-top: 0px;
+	padding: 0;
+}
+
+.nav_list a {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 3px 8px 3px;
+}
+
+.nav_button {
+	display: inline;
+	float: left;
+/*	border: 1px solid white;  */
+	padding: 7px 12px 8px 12px;
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: -0.3px;
+}
+
+
+/*      NAV BUTTONS COLORS     */
+
+.nav_button.home {
+	box-shadow: 0px -1px 0 0 rgb(95, 163, 252);  /* albastru */
+}
+
+.nav_button.home:hover {
+	background-color: rgba(95, 163, 252, 0.7);
+}
+
+.nav_button.onhome {
+	background-color: rgba(95, 163, 252, 0.7);   /* cand esti pe HOME */
+}
+
+.nav_button.day {
+	box-shadow: 0px -1px 0 0 rgb(186, 70, 70);	/* rosu */
+}
+
+.nav_button.day:hover {
+	background-color: rgba(186, 70, 70, 0.7);
+}
+
+.nav_button.onday {
+	background-color: rgba(186, 70, 70, 0.7);  /* cand esti pe DAY BY DAY */
+}
+
+.nav_button.one {
+	box-shadow: 0px -1px 0 0 rgb(170, 77, 188); 	/* mov */
+}
+
+.nav_button.one:hover {
+	background-color: rgba(170, 77, 188, 0.7);
+}
+
+.nav_button.onone {
+	background-color: rgba(170, 77, 188, 0.7);   /* cand esti pe 1 ON 1 WITH HER */
+}
+
+.nav_button.inspiration {
+	box-shadow: 0px -1px 0 0 rgb(43, 173, 77);	/* verde */
+}
+
+.nav_button.inspiration:hover {
+	background-color: rgba(43, 173, 77, 0.7);
+}
+
+.nav_button.oninspiration {
+	background-color: rgba(43, 173, 77, 0.7);	/* cand esti pe INSPIRATION */
+}
+
+.nav_button.about {
+	box-shadow: 0px -1px 0 0 rgb(237, 130, 30);		/* portocaliu */
+}
+
+.nav_button.about:hover {
+	background-color: rgba(237, 130, 30, 0.7);
+}
+
+.nav_button.onabout {
+	background-color: rgba(237, 130, 30, 0.7);		/* cand esti pe YOURS TRULY */
+}
+
+.nav_button.touch {
+	box-shadow: 0px -1px 0 0 rgb(119, 119, 119);	/* gri */
+}
+
+.nav_button.touch:hover {
+	background-color: rgba(119, 119, 119, 0.7);
+}
+
+.nav_button.ontouch {
+	background-color: rgba(119, 119, 119, 0.7);		/* cand esti pe GET IN TOUCH */
+}
+
+/*           HEADER    OVER          */
+
+/*     		  STARTING   BODY         */
+
+.body_div {
+	clear: both;
+	width: 1200px;
+	margin: auto;
+	background-color: #fff;
+	margin-top: 60px;
+	height: auto;
+}
+
+.body_div_daybyday {
+	clear: both;
+	width: 1200px;
+	margin: auto;
+	background-color: #fff;
+	margin-top: 30px;
+	height: auto;
+}
+
+.body_div_story {
+	clear:both;
+	width: 1200px;
+	margin: auto;
+	height: auto;
+	background-color: #fff;
+	margin-top: 30px;
+}
+
+.empty_container {
+	clear: both;
+	width: 1200px;
+	margin:auto;
+	height: 90px;
+}
+
+
+.empty_container_120 {
+	clear: both;
+	width: 1200px;
+	margin:auto;
+	height: 120px;
+}
+
+.articles_container {
+	width: 800px;
+	margin-left: 0;
+	height: auto;
+	float: left;
+}
+
+.story_container {
+	width: 760px;
+	margin-left: 20px;
+	height: 350px;
+	margin-top: 30px;
+	border-bottom: 0.5px solid #999;
+}
+
+.single_story_container {     /* Cate 1 articol pe pagina  */
+	width: 760px;
+	margin-left: 20px;
+	height: auto;
+/*	background-color: #999; */
+	float: left;
+}
+
+.single_story_container .single_story_link {
+	text-decoration: none;
+	font-weight: normal;
+	color: rgba(0, 80, 183, 0.9);
+}
+
+.single_story_container .single_story_link:hover {
+	color: rgba(0, 80, 183, 0.7);
+}
+
+.single_story_container p {
+	color: #222;
+	font-size: 1.2em;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	letter-spacing: -0.1px;
+}
+
+.single_story_container.getintouch p {
+	font-size: 1.1em;
+}
+
+.single_story_container p#questions {
+	margin-left: 155px;
+	width: 460px;
+}
+
+.single_story_container p#collaboration {
+	margin-left: 125px;
+}
+
+.single_story_container p#send_your_message {
+	margin-left: 75px;
+}
+
+.single_story_container p#email_address_text {
+	letter-spacing: 1px;
+	font-weight: bold;
+	color: #444;
+	width: 330px;
+	margin-left: 57px;
+	margin-top: 3px;
+}
+
+.single_story_container p#email_address_text a{
+	text-decoration: none;
+	color: #444;
+}
+
+.single_story_container p#email_address_text a:hover {
+	text-decoration: underline;
+	color: rgb(66, 134, 244);
+	cursor: pointer;
+}
+
+.single_story_container img {
+	margin: 60px 0 60px 80px;
+}
+
+.single_story_container .single_story_moustache {
+	margin-left: 350px;
+	opacity: 1;
+	width: 70px;
+	padding: 0;
+	margin-top: 40px;
+}
+
+.single_story_container.yourstruly {
+	height: auto;
+}
+
+.single_story_container.yourstruly img {
+	margin-left: 330px;
+}
+
+.single_story_container.getintouch {
+	height: 780px;
+	background-image: url('Images/logogrideschisfarascris.png');
+	background-repeat: none;
+	background-position: -65px -66px;
+}
+
+.story_container:first-child {
+	margin-top: 5px;
+}
+
+.story_container h1 {
+	color: #111;
+}
+
+.story_container img {
+	float:left;
+	margin-right: 20px;
+	margin-top: 6px;
+}
+
+.story_container p.show_date {
+	margin-left: 270px;
+	color: #555;
+	font-size: 0.9em;
+	font-style: italic;
+	padding-top: 5px;
+	padding-bottom: 35px;
+	opacity: 1;
+}
+
+.story_container .story_quotes {
+	color: #555;
+}
+
+.story_container .story_quotes:hover {        /* cand vii cu mouse peste titlul paginii de langa data articolului */
+	color: rgb(186, 70, 70);
+	opacity: 1;
+}
+
+.story_container .story_quotes_oneonone:hover {
+	color: rgb(170, 77, 188);
+}
+
+.story_container .story_quotes_inspiration:hover {
+	color: rgb(43, 173, 77);
+}
+
+.story_container p.story_text {
+	color: #222;
+	font-size: 1.2em;
+	margin-left: 270px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	letter-spacing: -0.1px;
+}
+
+.story_container a {
+	color: rgba(0, 80, 183, 0.8);
+	text-decoration: none;
+}
+
+.story_container a:hover {
+	opacity: 0.8;
+}
+
+.story_container a.story_link {
+	color: #000;
+}
+
+.story_container a.story_link:hover {
+	opacity: 1;
+	text-decoration: underline;
+}
+
+.side_container {
+	float: right;
+	width: 400px;
+	height: auto;
+}
+
+.side_story {
+	float: right;
+	width: 260px;
+	height: auto;
+	margin-right: 20px;
+	margin-bottom: 40px;
+	background-color: rgb(247, 247, 247);
+	border-radius: 4px;
+}
+
+.side_story h2 {
+	padding: 6px 5px 6px 8px;
+	text-align: left;
+	line-height: 20px;
+	font-size: 1em;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-weight: 500;
+	color: #fff;
+	background-color: #333;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+}
+
+.side_story h4 {
+	padding: 0px 5px;
+	color: #333;
+/*	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;  */
+	font-family: Arial, sans-serif;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+.side_story a {
+	text-decoration: none;
+	color: rgba(0, 80, 183, 0.9);
+	font-weight: 600;
+}
+
+.side_story a:hover {
+	opacity: 0.8;
+}
+
+.side_story.social {
+	height: 80px;
+}
+
+.side_story.social h2 {
+	background-color: rgba(0, 93, 216, 0.7);
+}
+
+.side_story.social img {
+	margin-top: 6px;
+	margin-left: 5px;
+}
+
+.side_story.social img:hover {
+	opacity: 0.8;
+}
+
+.side_story.ad {
+	height: 260px;
+}
+
+.side_story.ad h2 {
+	background-color: rgba(51, 51, 51, 0.4);
+}
+
+.side_story_weather {
+	margin-top: 20px;
+	color: #333;
+}
+
+.story_container.filters {
+	height: 50px;
+	padding-top: 10px;
+	border-bottom: none;
+}
+
+.story_container.filters a {
+	text-decoration: none;
+	background-color: #222;
+	color: #fff;
+	font-family: arial, sans-serif;
+	font-size: 15px;
+	padding: 5px 10px;
+	margin-left: 8px;
+	border-radius: 50% ;
+}
+
+.story_container.filters a:hover {
+	color: rgb(95, 163, 252);
+}
+
+.story_container.filters a:first-child {
+	margin-left: 355px;
+}
+
+
+/*            FOOTER STARTS HERE             */
+
+
+.footer {
+	clear: both;
+	height: 200px;
+	background-color: #111;
+	color: #fff;
+	font-family: arial, sans-serif; 
+}
+
+.footer_top {
+	width: 1200px;
+	margin: auto;
+	height: 160px;
+	border-bottom: 0.5px solid #999;
+}
+
+.footer_top_left {
+	float: left;
+	width: 290px;
+}
+
+.footer_top_left h2 {
+	margin-top: 12px;
+	margin-left: 20px;
+}
+
+.footer_top_left img {
+	margin-left: 85px;
+}
+
+.footer_top_center {
+	float: left;
+	width: 190px;
+}
+
+.footer_top_center ul {
+	list-style-type: none;
+	margin-top: 12px;
+}
+
+.footer_top_center a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.footer_top_center li {
+	font-size: 0.7em;
+	padding: 5px 0;
+}
+
+.footer_top_center li:hover {
+	opacity: 0.8;
+}
+
+.footer_top_center_social {
+	width: 200px;
+	float: left;
+}
+
+.footer_top_center_social img {
+	margin-top: 12px;
+}
+
+.footer_top_center_social img:hover {
+	opacity: 0.7;
+	transition: 0.3s;
+}
+
+.footer_top_right {
+	float:right;
+	width: 400px;
+	text-align: right;
+}
+
+.footer_top_right h2{
+	margin-top: 8px;
+	margin-right: 20px;
+	font-size: 0.9em;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 25px;
+}
+
+.footer_bottom {
+	clear: both
+	width: 1200px;
+	margin: auto;
+	height: 39px;
+	text-align: center;
+	line-height: 39px;
+	font-size: 0.8em;
+	color: rgb(237, 237, 237);
+}
+
